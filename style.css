@@ -1,0 +1,220 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.chat-container {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 400px auto;
+}
+
+.left-side {
+  min-width: 400px;
+  height: 100%;
+}
+
+.left-side .user-list {
+  padding: 10px;
+}
+
+.left-side .user-list .profile-info {
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #c6c6c6;
+  cursor: pointer;
+  transition: all 400ms;
+}
+
+.left-side .user-list .profile-info:hover {
+  background-color: lightgreen;
+  color: #fff;
+}
+
+.left-side .user-list .profile-info .avatar {
+  background-image: url("https://creazilla-store.fra1.digitaloceanspaces.com/icons/7912642/avatar-icon-md.png");
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-size: cover;
+}
+
+.left-side .user-list .profile-info .image-container {
+  display: flex;
+  gap: 10px;
+}
+
+.left-side .user-list .profile-info .user-info .user-nickname {
+  font-family: Roboto;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  color: #222;
+}
+
+.left-side .user-list .profile-info .user-info .message-review {
+  font-family: Roboto;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 12px;
+  color: #434449;
+}
+
+.left-side .user-list .profile-info .user-info .message-reply-review {
+  font-family: Roboto;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 12px;
+  color: #95999a;
+}
+
+.left-side .user-list .profile-info .indicator {
+  height: 7vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  font-family: Roboto;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 12px;
+}
+
+.left-side .user-list .profile-info .indicator .date {
+  font-size: 14px;
+  color: #8d8e90;
+}
+
+.left-side .user-list .profile-info .indicator .unread-message-count {
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background-color: #74a98a;
+  color: #fff;
+  font-size: 11px;
+}
+
+.right-side {
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  background: linear-gradient(180deg, #baca86 0%, #74a98a 100%);
+}
+
+.right-side .header {
+  background-color: #fff;
+  height: 8vh;
+  border-bottom: 2px solid #ebebeb;
+  display: grid;
+  grid-template-columns: 1fr 20fr 1fr;
+  align-items: center;
+}
+
+.right-side .header .icon {
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+.right-side .header .profile-info {
+  display: flex;
+  gap: 10px;
+}
+
+.right-side .header .profile-info .avatar {
+  background-image: url("https://creazilla-store.fra1.digitaloceanspaces.com/icons/7912642/avatar-icon-md.png");
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-size: cover;
+}
+
+.right-side .header .profile-info .user-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.right-side .header .profile-info .user-info .user-nickname {
+  font-family: Roboto;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  color: #222;
+}
+
+.right-side .header .profile-info .user-info .user-role {
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  color: #999;
+}
+
+.right-side .chat {
+  flex: auto;
+}
+
+.right-side .message-input {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 20fr 1fr 1fr;
+  height: 7vh;
+  background-color: #fff;
+  color: #8d8d8d;
+  cursor: pointer;
+  padding: 0 10px;
+}
+
+.right-side .message-input .icon {
+  display: grid;
+  place-items: center;
+}
+
+.right-side .message-input .icon:nth-child(4) {
+  color: rgb(113, 209, 113);
+}
+
+.right-side .message-input input {
+  border: none;
+  border-radius: 10px;
+  height: 30px;
+  width: 95%;
+  /* background-color: #ebebeb; */
+  padding: 0 10px;
+  outline: none;
+}
+
+.left-side .search {
+  height: 8vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 2px solid #ebebeb;
+}
+
+.left-side .search input {
+  border: none;
+  border-radius: 10px;
+  height: 30px;
+  width: 95%;
+  background-color: #ebebeb;
+  padding: 0 10px;
+  outline: none;
+}
